@@ -1,21 +1,7 @@
-{% load static %}
+{% extends "layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mithila</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-  </head>
-  <body>
-    <div>
-      <a id="navbar" href="#">Mithila</a>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <input placeholder ="search mithila">
-      <button>Search</button>
-    </div>
-  </body>
-</html>
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>This is the Home Page.</h1>
+{% endblock %}
