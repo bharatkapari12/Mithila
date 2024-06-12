@@ -23,4 +23,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
     path('core/', include('core_app.urls')),
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
