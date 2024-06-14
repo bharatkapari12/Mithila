@@ -7,10 +7,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Layout Page{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
     {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
+    <br>
+    {% block content %}{% endblock %}
+    <br>
     <nav>
       <div>
         <a id="navbar" href="#">Mithila</a>
@@ -21,6 +24,5 @@
         <button>Search</button>
       </div>
     </nav>
-    {% block content %}{% endblock %}
   </body>
 </html>
