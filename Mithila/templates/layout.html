@@ -11,10 +11,29 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
-    <br>
-    {% block content %}{% endblock %}
-    <br>
-    <nav>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#">MITHILA_LOGO</a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="signup-button">
+          <button><a href="#">Sign Up</a></button>
+        </div>
+      </div>
+    </nav>
+    <div class="social-media">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    {% comment %} <nav>
       <div>
         <a id="navbar" href="#">Mithila</a>
         <a href="#">Home</a>
@@ -23,6 +42,9 @@
         <input type="text" placeholder="search mithila"/>
         <button>Search</button>
       </div>
-    </nav>
+    </nav> {% endcomment %}
+    <br>
+    {% block content %}{% endblock %}
+    <br>
   </body>
 </html>
