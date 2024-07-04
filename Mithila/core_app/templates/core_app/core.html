@@ -9,4 +9,19 @@
         <a href="#">Logo</a>
     </nav>
 </header>
+<br>
+<h1>Mithila Places</h1>
+    <ul>
+        {% for item in mithila_items %}
+        <li>
+            <h2>{{ item.place_name }}</h2>
+            <p>Region: {{ item.get_region_display }}</p>
+            <p>Date Added: {{ item.date_added }}</p>
+            {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.place_name }}">
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</h1>
 {% endblock %}
