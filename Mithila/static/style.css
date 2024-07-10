@@ -93,7 +93,7 @@ main {
 }
 
 .hero {
-  background: url('bk.png') no-repeat center center/cover;
+  background: url("bk.png") no-repeat center center/cover;
   color: gainsboro;
   padding: 100px 20px;
   text-align: center;
@@ -109,17 +109,25 @@ main {
   margin-bottom: 40px;
 }
 
-.about, .portfolio, .services, .testimonials, .contact {
+.about,
+.portfolio,
+.services,
+.testimonials,
+.contact {
   padding: 60px 20px;
 }
 
-.about h2, .portfolio h2, .services h2, .testimonials h2, .contact h2 {
+.about h2,
+.portfolio h2,
+.services h2,
+.testimonials h2,
+.contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.about p{
+.about p {
   background: white;
   padding: 50px 50px 50px;
   border-radius: 5px;
@@ -167,7 +175,7 @@ main {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background:darkcyan;
+  background: darkcyan;
   border-radius: 10px;
 }
 
