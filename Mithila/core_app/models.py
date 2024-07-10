@@ -17,6 +17,7 @@ class MithilaModel(models.Model):
     image = models.ImageField(upload_to='mithilaimages/')
     # choices set to MITHILA_REGION to restrict the  possible values to those in the list.
     region = models.CharField(max_length=3, choices=MITHILA_REGION, default='JNK')
+    descriptions = models.TextField(default='')
 
     # def __str__(self) -> str:
     #     return self.region
