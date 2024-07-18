@@ -6,4 +6,11 @@ Mithila Items Detail Page
 
 {% block content %}
 <h1>Mithila Details</h1>
+<h2>{{ mithila_detail.place_name }}</h2>
+<p>Region: {{ mithila_detail.get_region_display }}</p>
+<p>Date Added: {{ mithila_detail.date_added }}</p>
+{% if mithila_detail.image %}
+<img src="{{ mithila_detail.image.url }}" alt="{{ mithila_detail.place_name }}">
+{% endif %}
+<p>{{ mithila_detail.descriptions }}</p>
 {% endblock content %}

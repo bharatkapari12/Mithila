@@ -7,5 +7,5 @@ def home(request):
 def about(request):
     return render(request, 'web/about.html')
 
-def core(request):
-    return render(request, 'core_app/core.hmtl')
+# def core(request):
+#     return render(request, 'core_app/core.hmtl')

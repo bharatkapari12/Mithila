@@ -17,7 +17,7 @@
             <h2>{{ item.place_name }}</h2>
             <p>Region: {{ item.get_region_display }}</p>
             <p>Date Added: {{ item.date_added }}</p>
-            <a href="{% url "core_detail", mithila_detail.id %}">
+            <a href="{% url 'core_detail' item.id %}">
                 <button>detail</button>
             </a>
             {% if item.image %}
