@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 class MithilaModel(models.Model):
@@ -28,3 +29,36 @@ class MithilaModel(models.Model):
     class Meta:
         ordering = ('place_name',)
         verbose_name_plural = "Mithila Models"
+
+    
+# one to many relation
+class MithilaFood(models.Model):
+    mithilafoods = models.ForeignKey(MithilaModel, on_delete=models.CASCADE, related_name='mithilafoods')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    foodrating = models.IntegerField()
+    foodcomment = models.TextField()
+    date_added = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f'{self.user.username} food of {self.mithilafoods.place_name}'
+
+  
+# Many to many relation
+class MithilaLanguage(models.Model):
+    language_name = models.CharField(max_length=50)
+    language_origin = models.CharField(max_length=50)
+    mithila_place = models.ManyToManyField(MithilaModel, related_name='mithila_place')
+
+    def __str__(self):
+        return self.language_name
+    
+
+# One to one relaion
+class MithilaCertificate(models.Model):
+    mithila_certificate = models.OneToOneField(MithilaModel, on_delete=models.CASCADE, related_name='+')
+    certificate_no = models.CharField(max_length=100)
+    issue_date = models.DateTimeField(default=timezone.now)
+    expire_date = models.DateTimeField()
+
+    def __str__(self):
+        return f'Certificate for {self.mithila_certificate.place_name}'
