@@ -24,7 +24,7 @@ class MithilaModel(models.Model):
     #     return self.region
     
     def __str__(self) -> str:
-        return self.get_region_display()  # This will return the human-readable name
+        return self.region()  # This will return the human-readable name
     
     class Meta:
         ordering = ('place_name',)
